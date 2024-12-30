@@ -1,0 +1,102 @@
+body{
+    background-color: #191970;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    
+}
+
+.todo-title{
+    text-align: center;
+}
+
+.todo-container{
+    background-color: white;
+    color: #191970;
+    min-width: 250px;
+    padding: 1px 20px 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.todo-item{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.todo-item-text{
+    margin-left: 5px;
+    font-size: large;
+}
+.todo-checkbox {
+    -webkit-appearance: none; /* Removes default checkbox style */
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Makes the checkbox round */
+    border: 2px solid #191970; /* Green border */
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover and checked effect */
+}
+
+.todo-checkbox:checked {
+    background-color: #191970; /* Green background when checked */
+    border-color: #191970; /* Darker green border */
+}
+
+.todo-checkbox:checked::before {
+    content: '\2713'; /* Checkmark symbol */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    left: 2px;
+}
+
+.todo-checkbox:hover {
+    /* border-color: #191970;  */
+    border: none;
+    background-color: #2020c9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+.todo-checkbox:focus {
+    outline: none; /* Removes default outline */
+    border-color: #191970; /* Darker green border on focus */
+}
+
+
+.todo-button {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #191970; /* Green background */
+    color: white;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.todo-button:hover {
+    background-color: #2020c9; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift the button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.todo-button:active {
+    transform: translateY(1px); /* Button pressed effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on click */
+}
